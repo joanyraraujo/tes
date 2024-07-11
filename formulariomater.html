@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            background-color: #cd988c;
+        }
+        form{
+             width: 100%;
+        }
+        input{
+            margin-top: 3%;
+        }
+        #formulario{
+            margin-left: 5px;
+            margin-bottom: 5%;
+            background-color:#eccccc ;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            border: none;
+        }
+        .perguntas{
+            margin-bottom: 11%;
+        }
+        fieldset{
+            text-align: center;
+            border: none;
+        }
+        #email{
+            height: 20px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 1%;
+        }
+        .tito{
+            margin-bottom:-5%;
+            display: flex;
+            justify-content: center;
+            margin-right:0;
+        }
+        #mensagem{
+            width: 100%;
+            height: 20em;
+            border-radius: 10px;
+            border: none;
+        }
+        .conversa{
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            background-color: green;
+            font-size: 1.9em;
+        }
+    </style>
+</head>
+<body>
+    <div id="formulario">
+        <form action="https://formspree.io/f/xdknkodw" method="POST">
+            <h2 style="text-align: center;">Faça o teste e veja se tem direito</h2>
+            <fieldset>
+                <span class="perguntas" >A criança já nasceu?</span><br>
+                <input type="radio" id="nasceu" name="aCriançaJaNasceu" value="meuFilhoNaoNasceu"><label for="nasceu">Não</label>
+                <input type="radio" id="nonasceu" name="aCriançaJaNasceu" value="simMeuFilhoNasceu"><label for="nonasceu">Sim</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Seu filho tem menos de 5 anos?</span><br>
+                <input type="radio" id="nao" name="idade" value="maiorde5"><label for="nao">Não</label>
+                <input type="radio" id="sim" name="idade" value="menorde5"><label for="sim">Sim</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Você trabalha ou trabalhou como empregada domestica nos ultimos 24 meses?</span><br>
+                <input type="radio" id="simtrabalhei" name="trabalhei" value="simtrabalheiComoEmpregadaDomestica"><label for="simtrabalhei">Sim</label>
+                <input type="radio" id="naotrabalhei" name="trabalhei" value="notrabalheiComoEmpregadaDomestica"><label for="naotrabalhei">Não</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Você é contribuinte individual ou facultativo?</span><br>
+                <input type="radio" id="faculnao" name="facultativo" value="nofacultativo"><label for="faculnao">Não</label>
+                <input type="radio" id="faculsim" name="facultativo" value="simfacultativo"><label for="faculsim">Sim</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Você está desempregada, mas trabalhou no serviço público nos ultimos 12 meses antes do nascimento da criança?</span><br>
+                <input type="radio" id="simestou" name="desempregada" value="simtrabalheiNoServiçoPúbliconos12meses"><label for="simestou">Sim</label>
+                <input type="radio" id="noestou" name="desempregada" value="notrabalheiNoServiçoPúbliconos12meses"><label for="noestou">Não</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Você está desempregada, mas trabalhou na iniciativa privada (CLT) nos ultimos 24 meses?</span><br>
+                <input type="radio" id="simCLT" name="CLT" value="simTrabalheiComoCLTnosUltimos12Meses"><label for="simCLT">Sim</label>
+                <input type="radio" id="noCLT" name="CLT" value="NoTrabalheiEmpregadaComoCLTnosUltimos12Meses"><label for="noCLT">Não</label>
+            </fieldset>
+            <fieldset>
+                <span class="perguntas">Você é trabalhadora rural?</span><br>
+                <input type="radio" id="rural" name="voceéTrabalhadoraRural" value="simSouTrabalhadoraRural"><label for="rural">Sim</label>
+                <input type="radio" id="norural" name="voceéTrabalhadoraRural" value="NoSouTrabalhadoraRural"><label for="norural">Não</label>
+            </fieldset>
+            <div class="obs">
+                <fieldset>
+                    <label class="tito" for="email">E-mail</label><br><input type="email" id="email" name="email" required><br>
+                </fieldset>
+            </div>
+            <div class="obs">
+                <fieldset>
+                    <label style="margin-bottom: -13%;" class="tito" style="margin-left: 2%;" for="mensagem"><span class="perguntas">Especifique seu caso</span></label><br><textarea  style="outline: 0;" type="text" id="mensagem" name="Especificação" placeholder="Relate aqui"></textarea>
+                </fieldset>
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <button type="submit" style="align-self: center; margin-bottom: 3%; background-color: rgb(189, 50, 50); color: aliceblue;border: none; border-radius: 10px; font-size: 115%; padding: 5px; font-family: 'Times New Roman', Times, serif;">Descubrir se tenho direito</button>
+            </div>
+       </form>
+    </div>
+</body>
+</html>
